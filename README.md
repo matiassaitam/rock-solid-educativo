@@ -1,4 +1,12 @@
-# rock-solid
+# rock-solid-educativo
+
+## Guía educativa en español
+
+Copia educativa basada en la rama `develop` de [jdortiz/rock-solid](https://github.com/jdortiz/rock-solid), commit [`48d6073`](https://github.com/jdortiz/rock-solid/commit/48d6073). Conserva la solución del taller de Jorge D. Ortiz Fuentes y añade explicaciones en español. En este repositorio, `main` contiene la solución y la documentación guardadas en commits.
+
+Empieza en [GUIA_PRACTICA.md](./GUIA_PRACTICA.md): explica cada archivo, los conceptos de Rust, el flujo de autenticación, las etapas del taller y cómo probar y revisar esta solución.
+
+Es material de práctica, no una implementación preparada para producción: el desafío OTP no está vinculado al usuario en el servidor, hay credenciales de demostración y faltan límites de intentos. La licencia y atribución del proyecto original se conservan al final de este README.
 
 ## This repo
 
@@ -71,6 +79,46 @@ curl -i http://127.0.0.1:8080/health
 ## Workshop instructions
 
 Follow the complete, step-by-step workshop in [INSTRUCTIONS.md](./INSTRUCTIONS.md).
+
+## Workshop checkpoints
+
+In the [original repository](https://github.com/jdortiz/rock-solid), `main` is the starting point and `develop` contains the accumulated solution. In this educational copy, `main` contains the solution and the Spanish study material.
+
+The tags below belong to the original workshop; they are available locally only if you have imported them. To import the original tags and inspect a checkpoint:
+
+```console
+git fetch https://github.com/jdortiz/rock-solid.git --tags
+git switch --detach milestone/05-error-handling
+```
+
+Original workshop checkpoints:
+
+| Tag | Topic |
+| --- | --- |
+| `milestone/00-start` | Starting point |
+| `milestone/01-basic-server` | Basic HTTP server |
+| `milestone/02-user-repository` | User repository |
+| `milestone/03-session-jwt` | Session JWT |
+| `milestone/04-tracing` | Logging and tracing |
+| `milestone/05-error-handling` | Unified error handling |
+| `milestone/06-verify-start` | Start Verify authentication |
+| `milestone/07-verify-check` | Verify the OTP |
+| `milestone/08-identity-insights` | Identity Insights risk check |
+| `milestone/09-protected-endpoint` | Protected endpoint |
+| `milestone/10-middleware` | JWT middleware |
+| `milestone/complete` | Complete workshop |
+
+`git switch --detach` lets you inspect or run an imported checkpoint without changing `main`. With a clean working tree, return to the published educational solution with:
+
+```console
+git switch main
+```
+
+Once the original tag has been imported, create a branch if you want to make changes from that checkpoint:
+
+```console
+git switch -c my-work milestone/05-error-handling
+```
 
 ## License
 
